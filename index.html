@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOALKEEPER</title>
+  <link rel="stylesheet" href="goalkeeper.css">
+</head>
+<body>
+  <div id="g">
+    <div id="hud">
+      <div class="hb" id="lb"></div>
+      <div class="hb"><div class="hl">STREAK</div><div class="hv" id="hs">0</div></div>
+    </div>
+    <div id="cw">
+      <canvas id="gc"></canvas>
+
+      <!-- タイトル -->
+      <div id="to" class="ov">
+        <div id="key-hint-box">
+          <div class="kg">
+            <div class="kr"><span class="ki">W</span></div>
+            <div class="kr"><span class="ki">A</span><span class="ki ki-ghost"></span><span class="ki">D</span></div>
+          </div>
+          <span class="ko">or</span>
+          <div class="kg">
+            <div class="kr"><span class="ki">↑</span></div>
+            <div class="kr"><span class="ki">←</span><span class="ki ki-ghost"></span><span class="ki">→</span></div>
+          </div>
+        </div>
+        <div class="ot">GOALKEEPER</div>
+        <div class="os">
+          シュートの方向を見極めてセーブしろ！<br>
+          真ん中は<span class="oc">動かずに</span>キャッチ！<br>
+          <span class="os-sub">5本中3本セーブで勝利！</span>
+        </div>
+        <div id="lg"></div>
+        <button class="kb2" id="stb">
+          <span class="kbg"></span><span class="ksh"></span><span class="kbd"></span>
+          <span class="kbt"></span><span class="ksk"></span>
+          <span class="kball"></span><span class="klb">KICK OFF</span>
+        </button>
+      </div>
+
+      <!-- 負け -->
+      <div id="go">
+        <div id="glt">GOAL ×3</div>
+        <div id="lgr"></div>
+        <button class="kb2 kb2sm" id="reb">
+          <span class="kbg"></span><span class="ksh"></span><span class="kbd"></span>
+          <span class="kbt"></span><span class="ksk"></span>
+          <span class="kball"></span><span class="klb">RETRY</span>
+        </button>
+      </div>
+
+      <!-- 勝利 -->
+      <div id="wo">
+        <canvas id="cc"></canvas>
+        <div id="wt">WIN</div>
+        <button class="kb2 kb2sm" id="wb">
+          <span class="kbg"></span><span class="ksh"></span><span class="kbd"></span>
+          <span class="kbt"></span><span class="ksk"></span>
+          <span class="kball"></span><span class="klb">TITLE</span>
+        </button>
+      </div>
+
+      <div id="si"></div>
+      <div id="rf"><span id="rt"></span></div>
+      <div id="il"></div>
+      <div id="rd"></div>
+    </div>
+
+    <div id="ctrl">
+      <button class="cb" data-d="left">
+        <span class="bg"></span><span class="sh"></span><span class="bd"></span><span class="bt"></span>
+        <span class="clb">◀ LEFT</span><span class="ckb">A / ←</span>
+      </button>
+      <button class="cb" data-d="up">
+        <span class="bg"></span><span class="sh"></span><span class="bd"></span><span class="bt"></span>
+        <span class="clb">▲ UP</span><span class="ckb">W / ↑</span>
+      </button>
+      <button class="cb" data-d="right">
+        <span class="bg"></span><span class="sh"></span><span class="bd"></span><span class="bt"></span>
+        <span class="clb">RIGHT ▶</span><span class="ckb">D / →</span>
+      </button>
+    </div>
+    <div id="kh">A/← 左ダイブ　W/↑ 上ジャンプ　D/→ 右ダイブ　／　真ん中は何もしない</div>
+  </div>
+
+  <script src="goalkeeper.js"></script>
+</body>
+</html>
