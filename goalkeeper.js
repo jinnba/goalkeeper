@@ -78,9 +78,9 @@ const LEVELS = [
   { yn:.38, tl:.54, wu:.38, lb:'Lv3' }, // 540ms
   { yn:.38, tl:.45, wu:.32, lb:'Lv4' }, // 450ms
   { yn:.38, tl:.37, wu:.27, lb:'Lv5' }, // 370ms
-  { yn:.38, tl:.30, wu:.22, lb:'Lv6' }, // 300ms
-  { yn:.38, tl:.24, wu:.17, lb:'Lv7' }, // 240ms
-  { yn:.38, tl:.19, wu:.13, lb:'Lv8' }, // 190ms（人間限界）
+  { yn:.38, tl:.32, wu:.22, lb:'Lv6' }, // 320ms
+  { yn:.38, tl:.27, wu:.18, lb:'Lv7' }, // 270ms
+  { yn:.38, tl:.22, wu:.15, lb:'Lv8' }, // 220ms
 ];
 const NMAX    = LEVELS.length;
 const MIN_GAP = 85; // キーパーとキッカーの最低距離(px)
