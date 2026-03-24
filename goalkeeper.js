@@ -73,20 +73,20 @@ function sX(x, z) { return GCX + x*PPM*F/(F+z); }
 // 偶数レベル(2,4,6,8): ボール速度UP (timeLimit 短縮)
 // Lv8: 人間の反応限界付近 (190ms)
 const LEVELS = [
-  { yn:.38, tl:.75, wu:.40, lb:'Lv1' }, // 遠・標準
-  { yn:.38, tl:.52, wu:.35, lb:'Lv2' }, // 遠・速↑
-  { yn:.52, tl:.52, wu:.30, lb:'Lv3' }, // 中・速同
-  { yn:.52, tl:.36, wu:.26, lb:'Lv4' }, // 中・速↑
-  { yn:.64, tl:.36, wu:.22, lb:'Lv5' }, // 近・速同
-  { yn:.64, tl:.26, wu:.18, lb:'Lv6' }, // 近・速↑
-  { yn:.74, tl:.26, wu:.15, lb:'Lv7' }, // 最近・速同
-  { yn:.74, tl:.19, wu:.12, lb:'Lv8' }, // 最近・限界速
+  { yn:.38, tl:.75, wu:.50, lb:'Lv1' }, // 750ms
+  { yn:.38, tl:.64, wu:.44, lb:'Lv2' }, // 640ms
+  { yn:.38, tl:.54, wu:.38, lb:'Lv3' }, // 540ms
+  { yn:.38, tl:.45, wu:.32, lb:'Lv4' }, // 450ms
+  { yn:.38, tl:.37, wu:.27, lb:'Lv5' }, // 370ms
+  { yn:.38, tl:.30, wu:.22, lb:'Lv6' }, // 300ms
+  { yn:.38, tl:.24, wu:.17, lb:'Lv7' }, // 240ms
+  { yn:.38, tl:.19, wu:.13, lb:'Lv8' }, // 190ms（人間限界）
 ];
 const NMAX    = LEVELS.length;
 const MIN_GAP = 85; // キーパーとキッカーの最低距離(px)
 
 function cfg()   { return LEVELS[Math.min(lv-1, NMAX-1)]; }
-function kcY()   { return Math.min(HORIZON + (GB-HORIZON)*cfg().yn, KCY-MIN_GAP); }
+function kcY()   { return HORIZON + (GB-HORIZON)*0.38; }  // 全レベル固定距離
 function kcSc()  { const t = (kcY()-HORIZON)/(GB-HORIZON); return .28 + t*.30; }
 function bStart(){ const ky=kcY(), sc=kcSc(); return { x: GCX+8*sc, y: ky+56*sc }; }
 
